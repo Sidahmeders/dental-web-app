@@ -1,0 +1,94 @@
+@import '../../vars.scss';
+
+.one {
+    // color: $prime-col;
+    overflow-x: hidden;
+    text-align: center;
+    font-size: 18px;
+    
+    form {
+        margin-top: 5vh;
+
+        label {
+            display: block;
+            margin: 20px 10px 0;
+            color: $second-col;
+        }
+        select,
+        input,
+        textarea {
+            width: 80vw;
+            font-size: 18px;
+            border: 1px solid $prime-col;
+            padding: 3px 6px;
+        }
+        .teeth {
+            margin-top: 30px;
+
+            .colors {
+                margin-top: 20px;
+
+                span {
+                    display: inline-block;
+                    width: 110px;
+                    height: 24px;
+                    border: 2px solid grey;
+                    margin: 5px 20px;
+                    padding: 4px;
+                    font-size: 16px;
+                    color: rgb(255, 255, 255);
+                    text-shadow: 0 0 15px rgb(70, 70, 70);
+
+                    &:hover {
+                        cursor: crosshair;
+                    }
+                    &.eraser {
+                        color: black;
+                        font-weight: bold;
+                        text-shadow: 0 0 0;
+                    }
+                    &:nth-child(1) {background-color: red;}
+                    &:nth-child(2) {background-color: blue;}
+                    &:nth-child(3) {background-color: yellow;}
+                    &:nth-child(4) {background-color: green;}
+                    &:nth-child(5) {background-color: lightskyblue;}
+                    &:nth-child(6) {background-color: navajowhite;}
+                }
+            }
+            .dents {
+                background-color: $prime-col;
+                margin-top: 25px;
+
+                div {
+                    display: inline-block;
+                    width: 45px;
+                    height: 60px;
+                    margin: 2px;
+                    border: 5px solid white;
+                    border-radius: 0 0 20px 20px;
+                    overflow: hidden;
+
+                    span {
+                        display: block;
+                        height: 20px;
+                    }
+                    span:nth-child(1) {
+                        background-color: navajowhite;
+                    }
+                    span:nth-child(2) {
+                        background-color: red;
+                    }
+                    span:nth-child(3) {
+                        background-color: green;
+                    }
+                }
+            }
+        }
+        button {
+            width: 200px;
+            font-size: 20px;
+            padding: 2px;
+            margin: 15px 0;
+        }
+    } 
+}
