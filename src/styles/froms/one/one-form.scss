@@ -1,7 +1,6 @@
 @import '../../vars.scss';
 
 .one {
-    // color: $prime-col;
     overflow-x: hidden;
     text-align: center;
     font-size: 18px;
@@ -22,10 +21,10 @@
             border: 1px solid $prime-col;
             padding: 3px 6px;
         }
-        .teeth {
+        .teeth-colors {
             margin-top: 30px;
 
-            .colors {
+            .square-colors {
                 margin-top: 20px;
 
                 span {
@@ -56,31 +55,58 @@
                 }
             }
             .dents {
-                background-color: $prime-col;
                 margin-top: 25px;
+                background-color: rgb(150, 243, 165);
 
-                div {
-                    display: inline-block;
-                    width: 45px;
-                    height: 60px;
-                    margin: 2px;
-                    border: 5px solid white;
-                    border-radius: 0 0 20px 20px;
-                    overflow: hidden;
+                & > div {
+                    background-color: $second-col;
 
-                    span {
-                        display: block;
-                        height: 20px;
-                    }
-                    span:nth-child(1) {
+                    & > .tooth div {
+                        display: inline-block;
+                        width: 45px;
+                        height: 60px;
+                        margin: 2px;
+                        border: 5px solid white;
                         background-color: navajowhite;
+                        overflow: hidden;
+
+                        span {
+                            display: block;
+                            height: 20px;
+                            border-bottom: 1px solid rgb(255, 255, 255);
+                            font-size: 15px;
+                        }
                     }
-                    span:nth-child(2) {
-                        background-color: red;
+                    &.superior  {
+                        padding-bottom: 20px;
+                        .tooth div {
+                            border-radius: 0 0 20px 20px;
+                        }
+                        .anterior div {
+                            &.canine {
+                                width: 40px;
+                                border-radius: 0 0 50% 50%;
+                                padding: 3px 0;
+                            }
+                            &.mid {
+                                margin-bottom: 5px;
+                                width: 50px;
+                            }
+                        }
                     }
-                    span:nth-child(3) {
-                        background-color: green;
-                    }
+                    &.inferior {
+                        margin-top: 2px;
+                        padding-top: 30px;
+                        .tooth div {
+                            border-radius: 20px 20px 0 0;
+                        }
+                        .anterior div {
+                            &.nin {
+                                width: 40px;
+                                border-radius: 50% 50% 0 0;
+                            }
+                        }
+                    } 
                 }
             }
         }
@@ -92,3 +118,4 @@
         }
     } 
 }
+

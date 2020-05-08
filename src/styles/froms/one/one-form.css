@@ -23,15 +23,15 @@
   padding: 3px 6px;
 }
 
-.one form .teeth {
+.one form .teeth-colors {
   margin-top: 30px;
 }
 
-.one form .teeth .colors {
+.one form .teeth-colors .square-colors {
   margin-top: 20px;
 }
 
-.one form .teeth .colors span {
+.one form .teeth-colors .square-colors span {
   display: inline-block;
   width: 110px;
   height: 24px;
@@ -43,70 +43,97 @@
   text-shadow: 0 0 15px #464646;
 }
 
-.one form .teeth .colors span:hover {
+.one form .teeth-colors .square-colors span:hover {
   cursor: crosshair;
 }
 
-.one form .teeth .colors span.eraser {
+.one form .teeth-colors .square-colors span.eraser {
   color: black;
   font-weight: bold;
   text-shadow: 0 0 0;
 }
 
-.one form .teeth .colors span:nth-child(1) {
+.one form .teeth-colors .square-colors span:nth-child(1) {
   background-color: red;
 }
 
-.one form .teeth .colors span:nth-child(2) {
+.one form .teeth-colors .square-colors span:nth-child(2) {
   background-color: blue;
 }
 
-.one form .teeth .colors span:nth-child(3) {
+.one form .teeth-colors .square-colors span:nth-child(3) {
   background-color: yellow;
 }
 
-.one form .teeth .colors span:nth-child(4) {
+.one form .teeth-colors .square-colors span:nth-child(4) {
   background-color: green;
 }
 
-.one form .teeth .colors span:nth-child(5) {
+.one form .teeth-colors .square-colors span:nth-child(5) {
   background-color: skyblue;
 }
 
-.one form .teeth .colors span:nth-child(6) {
+.one form .teeth-colors .square-colors span:nth-child(6) {
   background-color: navajowhite;
 }
 
-.one form .teeth .dents {
-  background-color: #999;
+.one form .teeth-colors .dents {
   margin-top: 25px;
+  background-color: #96f3a5;
 }
 
-.one form .teeth .dents div {
+.one form .teeth-colors .dents > div {
+  background-color: #0e6e7a;
+}
+
+.one form .teeth-colors .dents > div > .tooth div {
   display: inline-block;
   width: 45px;
   height: 60px;
   margin: 2px;
   border: 5px solid white;
-  border-radius: 0 0 20px 20px;
+  background-color: navajowhite;
   overflow: hidden;
 }
 
-.one form .teeth .dents div span {
+.one form .teeth-colors .dents > div > .tooth div span {
   display: block;
   height: 20px;
+  border-bottom: 1px solid white;
+  font-size: 15px;
 }
 
-.one form .teeth .dents div span:nth-child(1) {
-  background-color: navajowhite;
+.one form .teeth-colors .dents > div.superior {
+  padding-bottom: 20px;
 }
 
-.one form .teeth .dents div span:nth-child(2) {
-  background-color: red;
+.one form .teeth-colors .dents > div.superior .tooth div {
+  border-radius: 0 0 20px 20px;
 }
 
-.one form .teeth .dents div span:nth-child(3) {
-  background-color: green;
+.one form .teeth-colors .dents > div.superior .anterior div.canine {
+  width: 40px;
+  border-radius: 0 0 50% 50%;
+  padding: 3px 0;
+}
+
+.one form .teeth-colors .dents > div.superior .anterior div.mid {
+  margin-bottom: 5px;
+  width: 50px;
+}
+
+.one form .teeth-colors .dents > div.inferior {
+  margin-top: 2px;
+  padding-top: 30px;
+}
+
+.one form .teeth-colors .dents > div.inferior .tooth div {
+  border-radius: 20px 20px 0 0;
+}
+
+.one form .teeth-colors .dents > div.inferior .anterior div.nin {
+  width: 40px;
+  border-radius: 50% 50% 0 0;
 }
 
 .one form button {
