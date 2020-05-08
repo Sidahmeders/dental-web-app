@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../styles/froms/one/one-form.css'
 
 
 function FormOne() {
+
+    const [caseColor, setCaseColor] = useState("white");
+    const selectCaseColor = color => setCaseColor(color);
+
+    const [teethArray, setTeehthArray] = useState([]);
+
+    for (let i = 0; i <= 32; i++) {
+        teethArray.push(
+            <div key={i}>
+                <span>{i}</span>
+                <span></span>
+                <span></span>
+            </div>
+        );
+    }
+
+    const setToothColor = (color, toothIndex) => {
+        console.log('get out of my way');
+    };
 
     return (
         <div className="one">
@@ -34,175 +53,16 @@ function FormOne() {
                     <div className="teeth">
                         <p>select a color that specify your case</p>
                         <div className="colors">
-                            <span>case one</span>
-                            <span>case two</span>
-                            <span>case three</span>
-                            <span>case four</span>
-                            <span>case five</span>
+                            <span onClick={() => setCaseColor("red")}>case one</span>
+                            <span onClick={() => setCaseColor("blue")}>case two</span>
+                            <span onClick={() => setCaseColor("yellow")}>case three</span>
+                            <span onClick={() => setCaseColor("skyblue")}>case four</span>
+                            <span onClick={() => setCaseColor("navajowhite")}>case five</span>
                             <span>case six</span>
                             <span className="eraser">erase</span>
                         </div>
                         <div className="dents">
-                            <div>
-                                <span>1</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>2</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>3</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>4</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>5</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>6</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>7</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>8</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>9</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>10</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>11</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>12</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>13</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>14</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>15</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>16</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>17</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>18</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>19</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>20</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>21</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>22</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>23</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>24</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>25</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>26</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>27</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>28</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>29</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>30</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>31</span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div>
-                                <span>32</span>
-                                <span></span>
-                                <span></span>
-                            </div>
+                            {teethArray}
                         </div>
                     </div>
                     <button>submit the form</button>
