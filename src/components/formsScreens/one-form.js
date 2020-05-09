@@ -6,21 +6,6 @@ function FormOne() {
 
     const [caseColor, setCaseColor] = useState("white");
     
-    // const [teethArray, setTeethArray] = useState([
-    //     [18, 17, 16, 26, 27, 28,],
-    //     [15, 14, 24, 25],
-    //     [13, 12, 11, 21, 22, 23],
-    //     [43, 42, 41, 31, 32, 33]
-    //     [45, 44, 34, 35],
-    //     [48, 47, 46, 36, 37, 38]
-    // ]);
-
-    // for (let i = 0; i <= teethArray.length; i++) {
-    //     switch(i) {
-    //         case 0:
-    //     }
-    // }
-    
     const setToothColor = e => {
         e.preventDefault();
         e.target.style.backgroundColor = caseColor;
@@ -241,7 +226,6 @@ function FormOne() {
                                         <span onClick={e => setToothColor(e)}></span>
                                     </div>     
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
