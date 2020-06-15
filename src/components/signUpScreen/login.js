@@ -31,7 +31,7 @@ function Login() {
                     </Link>
                 </div>
             </div>
-            <Link to="/home">take me home</Link> //! remove this
+            <Link to="/home">take me home</Link>
         </div>
     );
 };

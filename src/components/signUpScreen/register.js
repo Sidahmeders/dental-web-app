@@ -5,6 +5,15 @@ import '../../styles/register/register.css';
 
 function Register() {
 
+    const renderFormInput = (label, inputType, inputRef) => {
+        return (
+            <div>
+                <label>{label}</label>
+                <input type={inputType} refs={inputRef} placeholder={inputRef}/>
+            </div>
+        );
+    };
+
     return (
         <div className="register-page">
             <div className="background-image"></div>
@@ -14,41 +23,15 @@ function Register() {
             </div>
             <div className="register-forms-div">
                 <form>
-                    <div>
-                        <label>Nom</label>
-                        <input type="text" name="nom" placeholder="nom"/>
-                    </div>
-                    <div>
-                        <label>Prenom</label>
-                        <input type="text" name="prenom" placeholder="prenom"/>
-                    </div>
-                    <div>
-                        <label>Birth</label>
-                        <input type="text" name="birth-date" placeholder="birth date y/m/d"/>
-                    </div>
-                    <div>
-                        <label>Branch</label>
-                        <input type="text" name="branch" placeholder="department"/>
-                    </div>
-                    <div>
-                        <label>label1</label>
-                        <input type="text" name="label1" placeholder="label1"/>
-                    </div>
-                    <div>
-                        <label>label2</label>
-                        <input type="text" name="label2" placeholder="label2"/>
-                    </div>
-                    <div>
-                        <label>label3</label>
-                        <input type="text" name="label3" placeholder="label3"/>
-                    </div>
-                    <button>Register</button>
+                    {renderFormInput("Nom", "text", "nom")}
+                    {renderFormInput("Prenom", "text", "prenom")}
+                    {renderFormInput("label_1", "text", "mm/dd/yy")}
+                    {renderFormInput("label_2", "text", "mm/dd/yy")}
+                    {renderFormInput("label_3", "text", "mm/dd/yy")}
                 </form>
                 <div className="login-link-btn">
                     <p>have account</p>
-                    <Link to="/">
-                        login
-                    </Link>
+                    <Link to="/">login</Link>
                 </div>
             </div>
         </div>
